@@ -54,13 +54,13 @@ public abstract class ResponseObject<T> {
 		return this.responseHttpType == null ? null : responseHttpType.getCode();
 	}
 
-		public String getType(){
-			String returnValue = null;
-			if(strType != null){
-				returnValue = "_"+this.strType;
-			}else if (value != null ){
-				returnValue = "_" + value.getClass().getSimpleName().toLowerCase();
-			}
-			return returnValue;
+	public String getType(){
+		String returnValue = null;
+		if(strType != null){
+			returnValue = "_"+this.strType;
+		}else if (value != null ){
+			returnValue = "_" + value.getClass().getSimpleName().toLowerCase();
 		}
+		return returnValue;
+	}
 }
